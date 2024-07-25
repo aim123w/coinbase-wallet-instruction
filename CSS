@@ -41,15 +41,14 @@ strong {
     color: #d32f2f; /* Красный цвет для выделенного текста */
 }
 
-.content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+main {
+    margin-bottom: 30px;
 }
 
 .step {
     margin-bottom: 30px;
+    max-width: 100%; /* Убедитесь, что контейнер не ограничивает размеры изображения */
+    overflow: hidden; /* Скрыть излишки */
 }
 
 .step img {
