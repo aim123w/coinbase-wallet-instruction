@@ -24,6 +24,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            position: relative;
         }
 
         header {
@@ -74,7 +75,7 @@
         }
 
         .step img {
-            width: 100%;
+            width: 25%; /* Уменьшение ширины до одной четверти от ширины контейнера */
             height: auto;
             border-radius: 8px;
             margin-top: 10px;
@@ -102,22 +103,112 @@
         .background-text {
             position: absolute;
             color: #004d40;
-            font-size: 2em;
+            font-size: 1.5em;
             opacity: 0.1;
             font-weight: bold;
             pointer-events: none;
         }
 
-        .text1 { top: 10%; left: 5%; }
-        .text2 { top: 20%; right: 10%; }
-        .text3 { bottom: 15%; left: 30%; }
-        .text4 { bottom: 30%; right: 20%; }
-        .text5 { top: 50%; left: 20%; }
-        .text6 { bottom: 10%; right: 40%; }
-        .text7 { top: 75%; left: 10%; }
-        .text8 { bottom: 50%; right: 10%; }
-        .text9 { top: 35%; left: 50%; }
-        .text10 { bottom: 20%; left: 60%; }
+        .background-text:nth-of-type(1) { top: 5%; left: 5%; }
+        .background-text:nth-of-type(2) { top: 15%; left: 10%; }
+        .background-text:nth-of-type(3) { top: 25%; left: 15%; }
+        .background-text:nth-of-type(4) { top: 35%; left: 20%; }
+        .background-text:nth-of-type(5) { top: 45%; left: 25%; }
+        .background-text:nth-of-type(6) { top: 55%; left: 30%; }
+        .background-text:nth-of-type(7) { top: 65%; left: 35%; }
+        .background-text:nth-of-type(8) { top: 75%; left: 40%; }
+        .background-text:nth-of-type(9) { top: 85%; left: 45%; }
+        .background-text:nth-of-type(10) { top: 10%; right: 5%; }
+        .background-text:nth-of-type(11) { top: 20%; right: 10%; }
+        .background-text:nth-of-type(12) { top: 30%; right: 15%; }
+        .background-text:nth-of-type(13) { top: 40%; right: 20%; }
+        .background-text:nth-of-type(14) { top: 50%; right: 25%; }
+        .background-text:nth-of-type(15) { top: 60%; right: 30%; }
+        .background-text:nth-of-type(16) { top: 70%; right: 35%; }
+        .background-text:nth-of-type(17) { top: 80%; right: 40%; }
+        .background-text:nth-of-type(18) { top: 90%; right: 45%; }
+        .background-text:nth-of-type(19) { bottom: 5%; left: 10%; }
+        .background-text:nth-of-type(20) { bottom: 15%; left: 15%; }
+        .background-text:nth-of-type(21) { bottom: 25%; left: 20%; }
+        .background-text:nth-of-type(22) { bottom: 35%; left: 25%; }
+        .background-text:nth-of-type(23) { bottom: 45%; left: 30%; }
+        .background-text:nth-of-type(24) { bottom: 55%; left: 35%; }
+        .background-text:nth-of-type(25) { bottom: 65%; left: 40%; }
+        .background-text:nth-of-type(26) { bottom: 75%; left: 45%; }
+        .background-text:nth-of-type(27) { bottom: 85%; left: 50%; }
+        .background-text:nth-of-type(28) { bottom: 5%; right: 10%; }
+        .background-text:nth-of-type(29) { bottom: 15%; right: 15%; }
+        .background-text:nth-of-type(30) { bottom: 25%; right: 20%; }
+        .background-text:nth-of-type(31) { bottom: 35%; right: 25%; }
+        .background-text:nth-of-type(32) { bottom: 45%; right: 30%; }
+        .background-text:nth-of-type(33) { bottom: 55%; right: 35%; }
+        .background-text:nth-of-type(34) { bottom: 65%; right: 40%; }
+        .background-text:nth-of-type(35) { bottom: 75%; right: 45%; }
+        .background-text:nth-of-type(36) { bottom: 85%; right: 50%; }
+        .background-text:nth-of-type(37) { top: 20%; left: 55%; }
+        .background-text:nth-of-type(38) { top: 30%; left: 60%; }
+        .background-text:nth-of-type(39) { top: 40%; left: 65%; }
+        .background-text:nth-of-type(40) { top: 50%; left: 70%; }
+        .background-text:nth-of-type(41) { top: 60%; left: 75%; }
+        .background-text:nth-of-type(42) { top: 70%; left: 80%; }
+        .background-text:nth-of-type(43) { top: 80%; left: 85%; }
+        .background-text:nth-of-type(44) { top: 90%; left: 90%; }
+        .background-text:nth-of-type(45) { top: 5%; left: 75%; }
+        .background-text:nth-of-type(46) { top: 15%; left: 80%; }
+        .background-text:nth-of-type(47) { top: 25%; left: 85%; }
+        .background-text:nth-of-type(48) { top: 35%; left: 90%; }
+        .background-text:nth-of-type(49) { top: 45%; left: 95%; }
+        .background-text:nth-of-type(50) { top: 55%; left: 100%; }
+        .background-text:nth-of-type(51) { top: 65%; left: 95%; }
+        .background-text:nth-of-type(52) { top: 75%; left: 90%; }
+        .background-text:nth-of-type(53) { top: 85%; left: 85%; }
+        .background-text:nth-of-type(54) { top: 5%; right: 65%; }
+        .background-text:nth-of-type(55) { top: 15%; right: 60%; }
+        .background-text:nth-of-type(56) { top: 25%; right: 55%; }
+        .background-text:nth-of-type(57) { top: 35%; right: 50%; }
+        .background-text:nth-of-type(58) { top: 45%; right: 45%; }
+        .background-text:nth-of-type(59) { top: 55%; right: 40%; }
+        .background-text:nth-of-type(60) { top: 65%; right: 35%; }
+        .background-text:nth-of-type(61) { top: 75%; right: 30%; }
+        .background-text:nth-of-type(62) { top: 85%; right: 25%; }
+        .background-text:nth-of-type(63) { bottom: 10%; left: 60%; }
+        .background-text:nth-of-type(64) { bottom: 20%; left: 65%; }
+        .background-text:nth-of-type(65) { bottom: 30%; left: 70%; }
+        .background-text:nth-of-type(66) { bottom: 40%; left: 75%; }
+        .background-text:nth-of-type(67) { bottom: 50%; left: 80%; }
+        .background-text:nth-of-type(68) { bottom: 60%; left: 85%; }
+        .background-text:nth-of-type(69) { bottom: 70%; left: 90%; }
+        .background-text:nth-of-type(70) { bottom: 80%; left: 95%; }
+        .background-text:nth-of-type(71) { bottom: 90%; left: 100%; }
+        .background-text:nth-of-type(72) { bottom: 10%; right: 60%; }
+        .background-text:nth-of-type(73) { bottom: 20%; right: 65%; }
+        .background-text:nth-of-type(74) { bottom: 30%; right: 70%; }
+        .background-text:nth-of-type(75) { bottom: 40%; right: 75%; }
+        .background-text:nth-of-type(76) { bottom: 50%; right: 80%; }
+        .background-text:nth-of-type(77) { bottom: 60%; right: 85%; }
+        .background-text:nth-of-type(78) { bottom: 70%; right: 90%; }
+        .background-text:nth-of-type(79) { bottom: 80%; right: 95%; }
+        .background-text:nth-of-type(80) { bottom: 90%; right: 100%; }
+        .background-text:nth-of-type(81) { top: 10%; left: 45%; }
+        .background-text:nth-of-type(82) { top: 20%; left: 50%; }
+        .background-text:nth-of-type(83) { top: 30%; left: 55%; }
+        .background-text:nth-of-type(84) { top: 40%; left: 60%; }
+        .background-text:nth-of-type(85) { top: 50%; left: 65%; }
+        .background-text:nth-of-type(86) { top: 60%; left: 70%; }
+        .background-text:nth-of-type(87) { top: 70%; left: 75%; }
+        .background-text:nth-of-type(88) { top: 80%; left: 80%; }
+        .background-text:nth-of-type(89) { top: 90%; left: 85%; }
+        .background-text:nth-of-type(90) { bottom: 15%; left: 40%; }
+        .background-text:nth-of-type(91) { bottom: 25%; left: 35%; }
+        .background-text:nth-of-type(92) { bottom: 35%; left: 30%; }
+        .background-text:nth-of-type(93) { bottom: 45%; left: 25%; }
+        .background-text:nth-of-type(94) { bottom: 55%; left: 20%; }
+        .background-text:nth-of-type(95) { bottom: 65%; left: 15%; }
+        .background-text:nth-of-type(96) { bottom: 75%; left: 10%; }
+        .background-text:nth-of-type(97) { bottom: 85%; left: 5%; }
+        .background-text:nth-of-type(98) { bottom: 95%; left: 0%; }
+        .background-text:nth-of-type(99) { bottom: 10%; right: 40%; }
+        .background-text:nth-of-type(100) { bottom: 20%; right: 45%; }
     </style>
 </head>
 <body>
@@ -129,34 +220,164 @@
         <h2>Восстановление кошелька</h2>
         <p>Если вы забыли пароль или хотите восстановить свой кошелек, выполните следующие шаги:</p>
         <div class="step">
-            <p>1. На экране входа нажмите на <strong>«Восстановить доступ»</strong>.</p>
+            <p>1. На экране входа нажмите на <strong>«Восстановить доступ»</strong>. Эта кнопка обычно находится внизу экрана или рядом с полем для ввода пароля. Убедитесь, что вы выбрали правильный метод восстановления, будь то через электронную почту, SMS или другой способ, предоставленный сервисом.</p>
             <img src="photo_2024-07-25_11-26-06.jpg" alt="Экран входа с кнопкой восстановления доступа">
         </div>
         <div class="step">
-            <p>2. Введите свою <strong>фразу восстановления</strong>, которая состоит из 12 или 24 слов. Эта фраза служит вашим ключом к восстановлению доступа к кошельку и должна храниться в секрете.</p>
+            <p>2. Введите свою <strong>фразу восстановления</strong>, которая состоит из 12 или 24 слов. Фраза восстановления — это специальный набор слов, который был предоставлен вам при создании кошелька. Эта фраза крайне важна и должна быть храниться в надежном месте. Введите слова в правильном порядке, как они были выданы.</p>
             <img src="photo_2024-07-25_11-26-06.jpg" alt="Ввод фразы восстановления">
         </div>
         <div class="step">
-            <p>3. Следуйте инструкциям на экране, чтобы завершить процесс восстановления. Внимательно читайте каждое сообщение и вводите информацию корректно.</p>
+            <p>3. Следуйте инструкциям на экране, чтобы завершить процесс восстановления. На этом этапе система может попросить вас подтвердить свою личность или ввести дополнительную информацию для проверки. Убедитесь, что вы внимательно следуете всем шагам и проверяете введенные данные.</p>
             <img src="photo_2024-07-25_11-26-25.jpg" alt="Инструкции на экране">
         </div>
         <div class="step">
-            <p>4. После успешного восстановления, вы сможете использовать свой кошелек как обычно. Coinbase — это надежная платформа для управления вашими цифровыми активами. Мы гордимся тем, что предлагаем вам высококачественные услуги и защиту. Если у вас возникнут вопросы или потребуется помощь, наша команда поддержки всегда готова прийти на помощь. Благодарим за ваше доверие!</p>
+            <p>4. После успешного восстановления, вы сможете использовать свой кошелек как обычно. Coinbase предоставляет надежную платформу для управления цифровыми активами и предлагает множество функций для удобства пользователей. Вы сможете отправлять и получать криптовалюту, обменивать ее на фиатные деньги, а также использовать другие услуги, которые предоставляет платформа. Мы высоко ценим ваше доверие и стремимся обеспечить высочайший уровень безопасности и удобства.</p>
         </div>
+        <p>Coinbase - это одна из ведущих криптовалютных платформ, предоставляющая услуги по покупке, продаже и хранению криптовалют. Мы гордимся тем, что можем предложить вам интуитивно понятный интерфейс, высокий уровень безопасности и поддержку клиентов мирового класса. Если у вас возникнут вопросы или проблемы, пожалуйста, не стесняйтесь обращаться в нашу службу поддержки. Мы всегда готовы помочь вам!</p>
     </main>
     <footer>
         <p>&copy; 2024 Инструкция по Coinbase Wallet. Все права защищены.</p>
     </footer>
     <!-- Текст на фоне -->
-    <div class="background-text text1">Coinbase</div>
-    <div class="background-text text2">Coinbase</div>
-    <div class="background-text text3">Coinbase</div>
-    <div class="background-text text4">Coinbase</div>
-    <div class="background-text text5">Coinbase</div>
-    <div class="background-text text6">Coinbase</div>
-    <div class="background-text text7">Coinbase</div>
-    <div class="background-text text8">Coinbase</div>
-    <div class="background-text text9">Coinbase</div>
-    <div class="background-text text10">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
+    <div class="background-text">Coinbase</div>
 </body>
 </html>
