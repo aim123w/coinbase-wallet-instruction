@@ -1,74 +1,50 @@
-/* Сброс стилей по умолчанию */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --primary-color: #00796b;
+    --secondary-color: #e0f7fa;
+    --text-color: #333;
+    --highlight-color: #d32f2f;
+    --border-radius: 8px;
 }
 
-/* Основные стили для страницы */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #e0f7fa; /* Светло-голубой фон */
-    color: #333;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     padding: 0 15px;
 }
 
 header {
-    background: #00796b; /* Тёмно-зелёный цвет для заголовка */
+    background: var(--primary-color);
     color: #fff;
     text-align: center;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 1.8em;
 }
 
 h2 {
     font-size: 1.5em;
-    color: #00796b; /* Тёмно-зелёный цвет для подзаголовков */
+    color: var(--primary-color);
     margin-bottom: 10px;
 }
 
-p {
-    margin-bottom: 15px;
-}
-
 strong {
-    color: #d32f2f; /* Красный цвет для выделенного текста */
+    color: var(--highlight-color);
 }
 
 .content {
     background: #fff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.step {
-    margin-bottom: 30px;
-}
-
-.step img {
-    max-width: 50%; /* Ограничение максимальной ширины изображения до 50% от ширины контейнера */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
-    border-radius: 8px;
-    margin-top: 10px;
-    /* Для альтернативного подхода, можете использовать transform:
-    transform: scale(0.5); 
-    transform-origin: top left; 
-    */
 }
 
 footer {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
-    background: #00796b;
+    background: var(--primary-color);
     color: #fff;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
-
