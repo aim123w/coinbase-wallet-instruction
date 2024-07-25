@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #e0f7fa; /* Светло-голубой фон */
+    background-color: #1e90ff; /* Синий фон */
     color: #333;
     padding: 0 15px;
     font-style: italic; /* Курсивный шрифт */
@@ -70,3 +70,4 @@ footer {
     color: #fff;
     border-radius: 8px;
 }
+
