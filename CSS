@@ -12,6 +12,7 @@ body {
     background-color: #e0f7fa; /* Светло-голубой фон */
     color: #333;
     padding: 0 15px;
+    font-style: italic; /* Курсивный шрифт */
 }
 
 header {
@@ -25,16 +26,19 @@ header {
 
 h1 {
     font-size: 1.8em;
+    font-style: italic; /* Курсивный шрифт */
 }
 
 h2 {
     font-size: 1.5em;
     color: #00796b; /* Тёмно-зелёный цвет для подзаголовков */
     margin-bottom: 10px;
+    font-style: italic; /* Курсивный шрифт */
 }
 
 p {
     margin-bottom: 15px;
+    font-style: italic; /* Курсивный шрифт */
 }
 
 strong {
@@ -52,10 +56,8 @@ main {
 }
 
 .step img {
-    transform: scale(0.1667); /* Уменьшение изображения в 6 раз */
-    transform-origin: top left; /* Точка отсчёта для трансформации */
-    max-width: none; /* Убираем ограничение на максимальную ширину */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
+    width: 16.67%; /* Уменьшение ширины до одной шестой от ширины контейнера */
+    height: auto; /* Сохранение пропорций */
     border-radius: 8px;
     margin-top: 10px;
 }
