@@ -14,16 +14,20 @@
 
         /* Основные стили для страницы */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background-color: #1e90ff; /* Синий фон */
+            background: #e0f7fa; /* Светло-голубой фон */
             color: #333;
-            padding: 0 15px;
-            font-style: italic; /* Курсивный шрифт */
+            padding: 0;
+            font-style: normal;
+            background-image: url('coinbase-pattern.png'); /* Фон с текстурой (понадобится картинка) */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         header {
-            background: #00796b; /* Тёмно-зелёный цвет для заголовка */
+            background: #0277bd; /* Темно-синий цвет для заголовка */
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -31,21 +35,28 @@
             margin-bottom: 20px;
         }
 
+        .logo {
+            max-width: 150px;
+            margin: 0 auto;
+            display: block;
+        }
+
         h1 {
-            font-size: 1.8em;
-            font-style: italic; /* Курсивный шрифт */
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
 
         h2 {
-            font-size: 1.5em;
-            color: #00796b; /* Тёмно-зелёный цвет для подзаголовков */
-            margin-bottom: 10px;
-            font-style: italic; /* Курсивный шрифт */
+            font-size: 1.6em;
+            color: #01579b; /* Тёмно-синий цвет для подзаголовков */
+            margin-bottom: 15px;
         }
 
         p {
-            margin-bottom: 15px;
-            font-style: italic; /* Курсивный шрифт */
+            margin-bottom: 20px;
+            font-size: 1em;
+            line-height: 1.8;
         }
 
         strong {
@@ -53,34 +64,65 @@
         }
 
         main {
-            margin-bottom: 30px;
+            margin: 0 15px;
         }
 
         .step {
             margin-bottom: 30px;
-            max-width: 100%; /* Убедитесь, что контейнер не ограничивает размеры изображения */
-            overflow: hidden; /* Скрыть излишки */
+            max-width: 100%;
+            overflow: hidden;
         }
 
         .step img {
-            width: 16.67%; /* Уменьшение ширины до одной шестой от ширины контейнера */
-            height: auto; /* Сохранение пропорций */
+            width: 100%;
+            height: auto;
             border-radius: 8px;
             margin-top: 10px;
         }
 
         footer {
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             margin-top: 20px;
-            background: #00796b;
+            background: #0277bd;
             color: #fff;
             border-radius: 8px;
         }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+        }
+
+        .background-text {
+            position: absolute;
+            color: #004d40;
+            font-size: 2em;
+            opacity: 0.1;
+            font-weight: bold;
+            pointer-events: none;
+        }
+
+        .text1 { top: 10%; left: 5%; }
+        .text2 { top: 20%; right: 10%; }
+        .text3 { bottom: 15%; left: 30%; }
+        .text4 { bottom: 30%; right: 20%; }
+        .text5 { top: 50%; left: 20%; }
+        .text6 { bottom: 10%; right: 40%; }
+        .text7 { top: 75%; left: 10%; }
+        .text8 { bottom: 50%; right: 10%; }
+        .text9 { top: 35%; left: 50%; }
+        .text10 { bottom: 20%; left: 60%; }
     </style>
 </head>
 <body>
     <header>
+        <img src="coinbase-logo.png" alt="Логотип Coinbase" class="logo"> <!-- Добавьте логотип здесь -->
         <h1>Инструкция по входу и восстановлению кошелька Coinbase</h1>
     </header>
     <main>
@@ -88,22 +130,33 @@
         <p>Если вы забыли пароль или хотите восстановить свой кошелек, выполните следующие шаги:</p>
         <div class="step">
             <p>1. На экране входа нажмите на <strong>«Восстановить доступ»</strong>.</p>
-            <img src="photo_2024-07-25_11-26-06.jpg" alt="Восстановление доступа">
+            <img src="photo_2024-07-25_11-26-06.jpg" alt="Экран входа с кнопкой восстановления доступа">
         </div>
         <div class="step">
-            <p>2. Введите свою <strong>фразу восстановления</strong>, которая состоит из 12 или 24 слов.</p>
+            <p>2. Введите свою <strong>фразу восстановления</strong>, которая состоит из 12 или 24 слов. Эта фраза служит вашим ключом к восстановлению доступа к кошельку и должна храниться в секрете.</p>
             <img src="photo_2024-07-25_11-26-06.jpg" alt="Ввод фразы восстановления">
         </div>
         <div class="step">
-            <p>3. Следуйте инструкциям на экране, чтобы завершить процесс восстановления.</p>
+            <p>3. Следуйте инструкциям на экране, чтобы завершить процесс восстановления. Внимательно читайте каждое сообщение и вводите информацию корректно.</p>
             <img src="photo_2024-07-25_11-26-25.jpg" alt="Инструкции на экране">
         </div>
         <div class="step">
-            <p>4. После успешного восстановления, вы сможете использовать свой кошелек как обычно. Благодарим вас за выбор Coinbase! Мы очень рады, что вы используете наши услуги и доверяете нам управление вашими цифровыми активами. Ваше удовлетворение и безопасность — наш приоритет. Если у вас возникнут вопросы или потребуется помощь, наша команда поддержки всегда готова прийти на помощь. Еще раз спасибо за ваше доверие и поддержку. Мы стремимся предоставлять вам наилучший опыт и с нетерпением ждем возможности продолжить работу с вами. С наилучшими пожеланиями, Команда Coinbase</p>
+            <p>4. После успешного восстановления, вы сможете использовать свой кошелек как обычно. Coinbase — это надежная платформа для управления вашими цифровыми активами. Мы гордимся тем, что предлагаем вам высококачественные услуги и защиту. Если у вас возникнут вопросы или потребуется помощь, наша команда поддержки всегда готова прийти на помощь. Благодарим за ваше доверие!</p>
         </div>
     </main>
     <footer>
         <p>&copy; 2024 Инструкция по Coinbase Wallet. Все права защищены.</p>
     </footer>
+    <!-- Текст на фоне -->
+    <div class="background-text text1">Coinbase</div>
+    <div class="background-text text2">Coinbase</div>
+    <div class="background-text text3">Coinbase</div>
+    <div class="background-text text4">Coinbase</div>
+    <div class="background-text text5">Coinbase</div>
+    <div class="background-text text6">Coinbase</div>
+    <div class="background-text text7">Coinbase</div>
+    <div class="background-text text8">Coinbase</div>
+    <div class="background-text text9">Coinbase</div>
+    <div class="background-text text10">Coinbase</div>
 </body>
 </html>
