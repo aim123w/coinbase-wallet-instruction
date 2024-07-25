@@ -1,50 +1,71 @@
-:root {
-    --primary-color: #00796b;
-    --secondary-color: #e0f7fa;
-    --text-color: #333;
-    --highlight-color: #d32f2f;
-    --border-radius: 8px;
+/* Сброс стилей по умолчанию */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Основные стили для страницы */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: #e0f7fa; /* Светло-голубой фон */
+    color: #333;
     padding: 0 15px;
 }
 
 header {
-    background: var(--primary-color);
+    background: #00796b; /* Тёмно-зелёный цвет для заголовка */
     color: #fff;
     text-align: center;
     padding: 20px;
-    border-radius: var(--border-radius);
+    border-radius: 8px;
     margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.8em;
 }
 
 h2 {
     font-size: 1.5em;
-    color: var(--primary-color);
+    color: #00796b; /* Тёмно-зелёный цвет для подзаголовков */
     margin-bottom: 10px;
 }
 
+p {
+    margin-bottom: 15px;
+}
+
 strong {
-    color: var(--highlight-color);
+    color: #d32f2f; /* Красный цвет для выделенного текста */
 }
 
 .content {
     background: #fff;
     padding: 20px;
-    border-radius: var(--border-radius);
+    border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.step {
+    margin-bottom: 30px;
+}
+
+.step img {
+    transform: scale(0.1667); /* Уменьшение изображения в 6 раз */
+    transform-origin: top left; /* Точка отсчёта для трансформации */
+    max-width: none; /* Убираем ограничение на максимальную ширину */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    border-radius: 8px;
+    margin-top: 10px;
 }
 
 footer {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
-    background: var(--primary-color);
+    background: #00796b;
     color: #fff;
-    border-radius: var(--border-radius);
+    border-radius: 8px;
 }
