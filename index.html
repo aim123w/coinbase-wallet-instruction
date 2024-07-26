@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +14,12 @@
 
         /* Основные стили для страницы */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             background: #e0f7fa; /* Светло-голубой фон */
             color: #333;
             padding: 0;
-            font-style: normal;
-            background-image: url('coinbase-pattern.png'); /* Фон с текстурой (понадобится картинка) */
+            background-image: url('coinbase-pattern.png'); /* Фон с текстурой */
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -28,36 +27,40 @@
         }
 
         header {
-            background: #0277bd; /* Темно-синий цвет для заголовка */
+            background: #01579b; /* Темно-синий цвет для заголовка */
             color: #fff;
             text-align: center;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 12px;
             margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .logo {
-            max-width: 150px;
+            max-width: 120px;
             margin: 0 auto;
             display: block;
         }
 
         h1 {
-            font-size: 2em;
-            font-weight: bold;
+            font-size: 2.4em;
+            font-weight: 700;
             margin-bottom: 10px;
+            letter-spacing: 1px;
         }
 
         h2 {
-            font-size: 1.6em;
-            color: #01579b; /* Тёмно-синий цвет для подзаголовков */
+            font-size: 1.8em;
+            color: #0277bd; /* Средне-синий цвет для подзаголовков */
             margin-bottom: 15px;
+            font-weight: 600;
         }
 
         p {
             margin-bottom: 20px;
-            font-size: 1em;
+            font-size: 1.1em;
             line-height: 1.8;
+            color: #555;
         }
 
         strong {
@@ -65,17 +68,22 @@
         }
 
         main {
-            margin: 0 15px;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 0 20px;
         }
 
         .step {
             margin-bottom: 30px;
-            max-width: 100%;
-            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .step img {
-            width: 25%; /* Уменьшение ширины до одной четверти от ширины контейнера */
+            width: 100%;
             height: auto;
             border-radius: 8px;
             margin-top: 10px;
@@ -85,135 +93,67 @@
             text-align: center;
             padding: 15px;
             margin-top: 20px;
-            background: #0277bd;
+            background: #01579b;
             color: #fff;
-            border-radius: 8px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         @media (max-width: 600px) {
             h1 {
-                font-size: 1.5em;
+                font-size: 1.8em;
             }
 
             h2 {
-                font-size: 1.3em;
+                font-size: 1.4em;
             }
         }
 
         .background-text {
             position: absolute;
             color: #004d40;
-            font-size: 1.5em;
+            font-size: 3em;
             opacity: 0.1;
             font-weight: bold;
             pointer-events: none;
+            user-select: none;
         }
 
-        .background-text:nth-of-type(1) { top: 5%; left: 5%; }
-        .background-text:nth-of-type(2) { top: 15%; left: 10%; }
-        .background-text:nth-of-type(3) { top: 25%; left: 15%; }
-        .background-text:nth-of-type(4) { top: 35%; left: 20%; }
-        .background-text:nth-of-type(5) { top: 45%; left: 25%; }
-        .background-text:nth-of-type(6) { top: 55%; left: 30%; }
-        .background-text:nth-of-type(7) { top: 65%; left: 35%; }
-        .background-text:nth-of-type(8) { top: 75%; left: 40%; }
-        .background-text:nth-of-type(9) { top: 85%; left: 45%; }
-        .background-text:nth-of-type(10) { top: 10%; right: 5%; }
-        .background-text:nth-of-type(11) { top: 20%; right: 10%; }
-        .background-text:nth-of-type(12) { top: 30%; right: 15%; }
-        .background-text:nth-of-type(13) { top: 40%; right: 20%; }
-        .background-text:nth-of-type(14) { top: 50%; right: 25%; }
-        .background-text:nth-of-type(15) { top: 60%; right: 30%; }
-        .background-text:nth-of-type(16) { top: 70%; right: 35%; }
-        .background-text:nth-of-type(17) { top: 80%; right: 40%; }
-        .background-text:nth-of-type(18) { top: 90%; right: 45%; }
-        .background-text:nth-of-type(19) { bottom: 5%; left: 10%; }
-        .background-text:nth-of-type(20) { bottom: 15%; left: 15%; }
-        .background-text:nth-of-type(21) { bottom: 25%; left: 20%; }
-        .background-text:nth-of-type(22) { bottom: 35%; left: 25%; }
-        .background-text:nth-of-type(23) { bottom: 45%; left: 30%; }
-        .background-text:nth-of-type(24) { bottom: 55%; left: 35%; }
-        .background-text:nth-of-type(25) { bottom: 65%; left: 40%; }
-        .background-text:nth-of-type(26) { bottom: 75%; left: 45%; }
-        .background-text:nth-of-type(27) { bottom: 85%; left: 50%; }
-        .background-text:nth-of-type(28) { bottom: 5%; right: 10%; }
-        .background-text:nth-of-type(29) { bottom: 15%; right: 15%; }
-        .background-text:nth-of-type(30) { bottom: 25%; right: 20%; }
-        .background-text:nth-of-type(31) { bottom: 35%; right: 25%; }
-        .background-text:nth-of-type(32) { bottom: 45%; right: 30%; }
-        .background-text:nth-of-type(33) { bottom: 55%; right: 35%; }
-        .background-text:nth-of-type(34) { bottom: 65%; right: 40%; }
-        .background-text:nth-of-type(35) { bottom: 75%; right: 45%; }
-        .background-text:nth-of-type(36) { bottom: 85%; right: 50%; }
-        .background-text:nth-of-type(37) { top: 20%; left: 55%; }
-        .background-text:nth-of-type(38) { top: 30%; left: 60%; }
-        .background-text:nth-of-type(39) { top: 40%; left: 65%; }
-        .background-text:nth-of-type(40) { top: 50%; left: 70%; }
-        .background-text:nth-of-type(41) { top: 60%; left: 75%; }
-        .background-text:nth-of-type(42) { top: 70%; left: 80%; }
-        .background-text:nth-of-type(43) { top: 80%; left: 85%; }
-        .background-text:nth-of-type(44) { top: 90%; left: 90%; }
-        .background-text:nth-of-type(45) { top: 5%; left: 75%; }
-        .background-text:nth-of-type(46) { top: 15%; left: 80%; }
-        .background-text:nth-of-type(47) { top: 25%; left: 85%; }
-        .background-text:nth-of-type(48) { top: 35%; left: 90%; }
-        .background-text:nth-of-type(49) { top: 45%; left: 95%; }
-        .background-text:nth-of-type(50) { top: 55%; left: 100%; }
-        .background-text:nth-of-type(51) { top: 65%; left: 95%; }
-        .background-text:nth-of-type(52) { top: 75%; left: 90%; }
-        .background-text:nth-of-type(53) { top: 85%; left: 85%; }
-        .background-text:nth-of-type(54) { top: 5%; right: 65%; }
-        .background-text:nth-of-type(55) { top: 15%; right: 60%; }
-        .background-text:nth-of-type(56) { top: 25%; right: 55%; }
-        .background-text:nth-of-type(57) { top: 35%; right: 50%; }
-        .background-text:nth-of-type(58) { top: 45%; right: 45%; }
-        .background-text:nth-of-type(59) { top: 55%; right: 40%; }
-        .background-text:nth-of-type(60) { top: 65%; right: 35%; }
-        .background-text:nth-of-type(61) { top: 75%; right: 30%; }
-        .background-text:nth-of-type(62) { top: 85%; right: 25%; }
-        .background-text:nth-of-type(63) { bottom: 10%; left: 60%; }
-        .background-text:nth-of-type(64) { bottom: 20%; left: 65%; }
-        .background-text:nth-of-type(65) { bottom: 30%; left: 70%; }
-        .background-text:nth-of-type(66) { bottom: 40%; left: 75%; }
-        .background-text:nth-of-type(67) { bottom: 50%; left: 80%; }
-        .background-text:nth-of-type(68) { bottom: 60%; left: 85%; }
-        .background-text:nth-of-type(69) { bottom: 70%; left: 90%; }
-        .background-text:nth-of-type(70) { bottom: 80%; left: 95%; }
-        .background-text:nth-of-type(71) { bottom: 90%; left: 100%; }
-        .background-text:nth-of-type(72) { bottom: 10%; right: 60%; }
-        .background-text:nth-of-type(73) { bottom: 20%; right: 65%; }
-        .background-text:nth-of-type(74) { bottom: 30%; right: 70%; }
-        .background-text:nth-of-type(75) { bottom: 40%; right: 75%; }
-        .background-text:nth-of-type(76) { bottom: 50%; right: 80%; }
-        .background-text:nth-of-type(77) { bottom: 60%; right: 85%; }
-        .background-text:nth-of-type(78) { bottom: 70%; right: 90%; }
-        .background-text:nth-of-type(79) { bottom: 80%; right: 95%; }
-        .background-text:nth-of-type(80) { bottom: 90%; right: 100%; }
-        .background-text:nth-of-type(81) { top: 10%; left: 45%; }
-        .background-text:nth-of-type(82) { top: 20%; left: 50%; }
-        .background-text:nth-of-type(83) { top: 30%; left: 55%; }
-        .background-text:nth-of-type(84) { top: 40%; left: 60%; }
-        .background-text:nth-of-type(85) { top: 50%; left: 65%; }
-        .background-text:nth-of-type(86) { top: 60%; left: 70%; }
-        .background-text:nth-of-type(87) { top: 70%; left: 75%; }
-        .background-text:nth-of-type(88) { top: 80%; left: 80%; }
-        .background-text:nth-of-type(89) { top: 90%; left: 85%; }
-        .background-text:nth-of-type(90) { bottom: 15%; left: 40%; }
-        .background-text:nth-of-type(91) { bottom: 25%; left: 35%; }
-        .background-text:nth-of-type(92) { bottom: 35%; left: 30%; }
-        .background-text:nth-of-type(93) { bottom: 45%; left: 25%; }
-        .background-text:nth-of-type(94) { bottom: 55%; left: 20%; }
-        .background-text:nth-of-type(95) { bottom: 65%; left: 15%; }
-        .background-text:nth-of-type(96) { bottom: 75%; left: 10%; }
-        .background-text:nth-of-type(97) { bottom: 85%; left: 5%; }
-        .background-text:nth-of-type(98) { bottom: 95%; left: 0%; }
-        .background-text:nth-of-type(99) { bottom: 10%; right: 40%; }
-        .background-text:nth-of-type(100) { bottom: 20%; right: 45%; }
+        /* Позиционирование фонового текста */
+        .background-text:nth-of-type(odd) {
+            top: calc(5% + (10% * (var(--i) - 1)));
+            left: calc(5% + (10% * (var(--i) - 1)));
+        }
+
+        .background-text:nth-of-type(even) {
+            top: calc(5% + (10% * (var(--i) - 1)));
+            right: calc(5% + (10% * (var(--i) - 1)));
+        }
+
+        .background-text:nth-of-type(2n + 1) {
+            left: calc(10% + (10% * (var(--i) - 1)));
+        }
+
+        .background-text:nth-of-type(2n) {
+            right: calc(10% + (10% * (var(--i) - 1)));
+        }
+
+        .background-text:nth-of-type(2n + 1) {
+            bottom: calc(5% + (10% * (var(--i) - 1)));
+        }
+
+        .background-text:nth-of-type(2n) {
+            bottom: calc(10% + (10% * (var(--i) - 1)));
+        }
+
+        .background-text:nth-of-type(2n) {
+            bottom: calc(5% + (10% * (var(--i) - 1)));
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="photo_2024-07-25_11-51-10.jpg" class="logo"> <!-- Добавьте логотип здесь -->
+        <img src="photo_2024-07-25_11-51-10.jpg" class="logo" alt="Логотип Coinbase"> <!-- Добавьте логотип здесь -->
         <h1>Инструкция по входу и восстановлению кошелька Coinbase</h1>
     </header>
     <main>
@@ -232,7 +172,7 @@
             <img src="photo_2024-07-25_11-26-25.jpg" alt="Инструкции на экране">
         </div>
         <div class="step">
-            <p>4. После успешного восстановления, вы сможете использовать свой кошелек как обычно. Coinbase предоставляет надежную платформу для управления цифровыми активами и предлагает множество функций для удобства пользователей. Вы сможете отправлять и получать криптовалюту, обменивать ее на фиатные деньги, а также использовать другие услуги, которые предоставляет платформа. Мы высоко ценим ваше доверие и стремимся обеспечить высочайший уровень безопасности и удобства.</p>
+            <p>4. После успешного восстановления вы сможете использовать свой кошелек как обычно. Coinbase предоставляет надежную платформу для управления цифровыми активами и предлагает множество функций для удобства пользователей. Вы сможете отправлять и получать криптовалюту, обменивать ее на фиатные деньги, а также использовать другие услуги, которые предоставляет платформа.</p>
         </div>
         <p>Coinbase - это одна из ведущих криптовалютных платформ, предоставляющая услуги по покупке, продаже и хранению криптовалют. Мы гордимся тем, что можем предложить вам интуитивно понятный интерфейс, высокий уровень безопасности и поддержку клиентов мирового класса. Если у вас возникнут вопросы или проблемы, пожалуйста, не стесняйтесь обращаться в нашу службу поддержки. Мы всегда готовы помочь вам!</p>
     </main>
@@ -240,144 +180,15 @@
         <p>&copy; 2024 Инструкция по Coinbase Wallet. Все права защищены.</p>
     </footer>
     <!-- Текст на фоне -->
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
-    <div class="background-text">Coinbase</div>
+    <div class="background-text" style="--i: 1;">Coinbase</div>
+    <div class="background-text" style="--i: 2;">Coinbase</div>
+    <div class="background-text" style="--i: 3;">Coinbase</div>
+    <div class="background-text" style="--i: 4;">Coinbase</div>
+    <div class="background-text" style="--i: 5;">Coinbase</div>
+    <div class="background-text" style="--i: 6;">Coinbase</div>
+    <div class="background-text" style="--i: 7;">Coinbase</div>
+    <div class="background-text" style="--i: 8;">Coinbase</div>
+    <div class="background-text" style="--i: 9;">Coinbase</div>
+    <div class="background-text" style="--i: 10;">Coinbase</div>
 </body>
 </html>
