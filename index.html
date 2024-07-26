@@ -5,66 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Инструкция по входу и восстановлению кошелька Coinbase</title>
     <style>
-        /* Сброс стилей по умолчанию */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         /* Основные стили для страницы */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             background: #e0f7fa; /* Светло-голубой фон */
             color: #333;
+            margin: 0;
             padding: 0;
-            background-image: url('coinbase-pattern.png'); /* Фон с текстурой */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            position: relative;
         }
 
         header {
+            position: relative;
             background: #01579b; /* Темно-синий цвет для заголовка */
             color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 60px 20px; /* Увеличенный отступ для фона */
             border-radius: 12px;
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden; /* Прячем текст за пределами заголовка */
         }
 
-        .logo {
-            max-width: 120px;
-            margin: 0 auto;
-            display: block;
+        .header-background-text {
+            position: absolute;
+            color: #fff; /* Белый цвет текста */
+            font-size: 10em; /* Размер шрифта */
+            font-weight: bold;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg); /* Центрируем и поворачиваем текст */
+            white-space: nowrap; /* Не переносить текст */
+            z-index: 0;
+            pointer-events: none; /* Исключаем взаимодействие с текстом */
+            user-select: none; /* Запрещаем выделение текста */
         }
 
         h1 {
             font-size: 2.4em;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin: 0;
             letter-spacing: 1px;
-        }
-
-        h2 {
-            font-size: 1.8em;
-            color: #0277bd; /* Средне-синий цвет для подзаголовков */
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        p {
-            margin-bottom: 20px;
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        strong {
-            color: #d32f2f; /* Красный цвет для выделенного текста */
+            position: relative;
+            z-index: 1;
         }
 
         main {
@@ -73,123 +56,74 @@
             padding: 0 20px;
         }
 
-        .step {
-            margin-bottom: 30px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #fff;
+        section {
+            background: #ffffff; /* Белый фон для секций */
+            border-radius: 12px;
             padding: 20px;
+            margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .step img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-top: 10px;
+        h2 {
+            font-size: 1.8em;
+            color: #01579b; /* Темно-синий цвет для подзаголовков */
+            border-bottom: 2px solid #01579b;
+            padding-bottom: 10px;
         }
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-            background: #01579b;
-            color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        p {
+            font-size: 1.1em;
+            margin: 10px 0;
         }
 
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.4em;
-            }
-        }
-
-        .background-text {
-            position: absolute;
-            color: #004d40;
-            font-size: 3em;
-            opacity: 0.1;
+        a {
+            color: #0277bd; /* Ярко-синий цвет для ссылок */
+            text-decoration: none;
             font-weight: bold;
-            pointer-events: none;
-            user-select: none;
         }
 
-        /* Позиционирование фонового текста */
-        .background-text:nth-of-type(odd) {
-            top: calc(5% + (10% * (var(--i) - 1)));
-            left: calc(5% + (10% * (var(--i) - 1)));
+        a:hover {
+            text-decoration: underline;
         }
 
-        .background-text:nth-of-type(even) {
-            top: calc(5% + (10% * (var(--i) - 1)));
-            right: calc(5% + (10% * (var(--i) - 1)));
+        .button {
+            display: inline-block;
+            background: #0277bd; /* Ярко-синий цвет для кнопок */
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, box-shadow 0.3s;
         }
 
-        .background-text:nth-of-type(2n + 1) {
-            left: calc(10% + (10% * (var(--i) - 1)));
-        }
-
-        .background-text:nth-of-type(2n) {
-            right: calc(10% + (10% * (var(--i) - 1)));
-        }
-
-        .background-text:nth-of-type(2n + 1) {
-            bottom: calc(5% + (10% * (var(--i) - 1)));
-        }
-
-        .background-text:nth-of-type(2n) {
-            bottom: calc(10% + (10% * (var(--i) - 1)));
-        }
-
-        .background-text:nth-of-type(2n) {
-            bottom: calc(5% + (10% * (var(--i) - 1)));
+        .button:hover {
+            background: #01579b; /* Темно-синий цвет при наведении */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="photo_2024-07-25_11-51-10.jpg" class="logo" alt="Логотип Coinbase"> <!-- Добавьте логотип здесь -->
-        <h1>Инструкция по входу и восстановлению кошелька Coinbase</h1>
+        <div class="header-background-text">Coinbase</div>
+        <h1>Добро пожаловать в инструкцию</h1>
     </header>
     <main>
-        <h2>Восстановление кошелька</h2>
-        <p>Если вы забыли пароль или хотите восстановить свой кошелек, выполните следующие шаги:</p>
-        <div class="step">
-            <p>1. На экране входа нажмите на <strong>«Восстановить доступ»</strong>. Эта кнопка обычно находится внизу экрана или рядом с полем для ввода пароля. Убедитесь, что вы выбрали правильный метод восстановления, будь то через электронную почту, SMS или другой способ, предоставленный сервисом.</p>
-            <img src="photo_2024-07-25_11-26-06.jpg" alt="Экран входа с кнопкой восстановления доступа">
-        </div>
-        <div class="step">
-            <p>2. Введите свою <strong>фразу восстановления</strong>, которая состоит из 12 или 24 слов. Фраза восстановления — это специальный набор слов, который был предоставлен вам при создании кошелька. Эта фраза крайне важна и должна быть храниться в надежном месте. Введите слова в правильном порядке, как они были выданы.</p>
-            <img src="photo_2024-07-25_11-26-06.jpg" alt="Ввод фразы восстановления">
-        </div>
-        <div class="step">
-            <p>3. Следуйте инструкциям на экране, чтобы завершить процесс восстановления. На этом этапе система может попросить вас подтвердить свою личность или ввести дополнительную информацию для проверки. Убедитесь, что вы внимательно следуете всем шагам и проверяете введенные данные.</p>
-            <img src="photo_2024-07-25_11-26-25.jpg" alt="Инструкции на экране">
-        </div>
-        <div class="step">
-            <p>4. После успешного восстановления вы сможете использовать свой кошелек как обычно. Coinbase предоставляет надежную платформу для управления цифровыми активами и предлагает множество функций для удобства пользователей. Вы сможете отправлять и получать криптовалюту, обменивать ее на фиатные деньги, а также использовать другие услуги, которые предоставляет платформа.</p>
-        </div>
-        <p>Coinbase - это одна из ведущих криптовалютных платформ, предоставляющая услуги по покупке, продаже и хранению криптовалют. Мы гордимся тем, что можем предложить вам интуитивно понятный интерфейс, высокий уровень безопасности и поддержку клиентов мирового класса. Если у вас возникнут вопросы или проблемы, пожалуйста, не стесняйтесь обращаться в нашу службу поддержки. Мы всегда готовы помочь вам!</p>
+        <section>
+            <h2>Вход в аккаунт</h2>
+            <p>1. <a href="https://www.coinbase.com">Откройте сайт Coinbase</a>.</p>
+            <p>2. Нажмите на кнопку <span class="button">Войти</span>.</p>
+            <p>3. Введите свой адрес электронной почты и пароль.</p>
+            <p>4. Нажмите <span class="button">Войти</span> для завершения процесса.</p>
+        </section>
+        <section>
+            <h2>Восстановление пароля</h2>
+            <p>1. <a href="https://www.coinbase.com">Откройте сайт Coinbase</a>.</p>
+            <p>2. Нажмите на ссылку <a href="https://www.coinbase.com/forgot-password">Забыли пароль?</a>.</p>
+            <p>3. Введите ваш адрес электронной почты.</p>
+            <p>4. Следуйте инструкциям, отправленным на вашу почту.</p>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Инструкция по Coinbase Wallet. Все права защищены.</p>
-    </footer>
-    <!-- Текст на фоне -->
-    <div class="background-text" style="--i: 1;">Coinbase</div>
-    <div class="background-text" style="--i: 2;">Coinbase</div>
-    <div class="background-text" style="--i: 3;">Coinbase</div>
-    <div class="background-text" style="--i: 4;">Coinbase</div>
-    <div class="background-text" style="--i: 5;">Coinbase</div>
-    <div class="background-text" style="--i: 6;">Coinbase</div>
-    <div class="background-text" style="--i: 7;">Coinbase</div>
-    <div class="background-text" style="--i: 8;">Coinbase</div>
-    <div class="background-text" style="--i: 9;">Coinbase</div>
-    <div class="background-text" style="--i: 10;">Coinbase</div>
 </body>
 </html>
-
